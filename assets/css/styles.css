@@ -1,3 +1,24 @@
+:root{
+    --bodyColor: #F3F5FC;
+    --botonEn: #0A3871;
+    --botonDes: #D8DFE8;
+    --rubikFont: font-family: 'Rubik', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5% /* 1rem = 10px */
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
-    background-color: #F3F5FC;
+    font-family: var(--rubikFont);
+    background-color: var(--bodyColor);
+    
+    font-size: 1.6rem;
+    line-height: 2;
+    
 }
