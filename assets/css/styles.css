@@ -1,9 +1,12 @@
 :root{
     --bodyColor: #F3F5FC;
     --azulMarino: #0A3871;
+    --azulMarinoLight: #0f52a3;
+    --azulMarinoClick: #4c6bf4;
     --azulBlanco: #D8DFE8;
+
     --blanco: #FFFFFF;
-    
+    --font: 'Rubik', sans-serif;
 
 }
 
@@ -17,7 +20,7 @@ html {
 }
 
 body {
-    font-family: 'Rubik', sans-serif;
+    font-family: var(--font);
     background-color: var(--bodyColor);
 
     font-size: 1.6rem;
@@ -97,6 +100,8 @@ p {
     font-size: 1.6rem;
 }
 
+
+/* Botones */
 .botones{
     align-self: center;
     margin-bottom: 5rem;  
@@ -104,6 +109,7 @@ p {
 
 .botones p{
     font-weight: 400;
+    margin-left: 1.5rem;
 }
 
 .boton{
@@ -111,6 +117,7 @@ p {
     margin: 0 1rem;
     border-radius: 1rem;
     border: none;
+    font-family: var(--font);
     
 }
 
@@ -118,9 +125,12 @@ p {
     background-color: var(--azulMarino);
     color: var(--blanco);
 }
+.boton-azul:hover{cursor: pointer; background-color: var(--azulMarinoLight); color: var(--blanco)}.boton-azul:active{background-color: var(--azulMarinoClick);}
+
 .boton-blanco{
     background-color: var(--azulBlanco);
     color: var(--azulMarino);
     border: 1px var(--azulMarino) solid;
+}.boton-blanco:hover{cursor: pointer; background-color: var(--azulMarinoLight); color: var(--blanco)}.boton-blanco:active{background-color: var(--azulMarinoClick);}
+/* endBotones */
 
-}
