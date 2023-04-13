@@ -54,6 +54,10 @@ p {
     flex-direction: column;
     justify-content: space-between;
 }
+.mensaje textarea{
+    font: var(--font);
+    font-size: 1.8rem;
+}
 
 .mensaje__label{
     color: var(--azulMarino);
@@ -77,8 +81,8 @@ p {
 
 .salida-datos {
     background-color: var(--blanco);
-    padding: 18rem 1.5rem 20rem 1.5rem;
-    margin: -5rem -15rem 0 15rem;
+    padding: 18rem 1.5rem 22rem 1.5rem;
+    margin: -7rem -15rem 0 15rem;
     
     border-radius: 15px;
     
