@@ -1,8 +1,10 @@
 :root{
     --bodyColor: #F3F5FC;
-    --botonEn: #0A3871;
-    --botonDes: #D8DFE8;
-    --rubikFont: font-family: 'Rubik', sans-serif;
+    --azulMarino: #0A3871;
+    --azulBlanco: #D8DFE8;
+    --blanco: #FFFFFF;
+    
+
 }
 
 html {
@@ -15,10 +17,110 @@ html {
 }
 
 body {
-    font-family: var(--rubikFont);
+    font-family: 'Rubik', sans-serif;
     background-color: var(--bodyColor);
-    
+
     font-size: 1.6rem;
     line-height: 2;
     
+}
+
+p {
+    margin: 0;
+}
+
+.contenedor {
+    max-width: 125rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.logo {
+    margin: 4rem 0 0 4rem;
+}
+
+
+.entrada-datos {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mensaje__label{
+    color: var(--azulMarino);
+    font-size: 3rem;
+}
+
+.mensaje__campo {
+    display: block;
+    background-color: var(--bodyColor);
+    border: none;
+    width: 80rem;
+    height: 20rem;
+    resize: none;
+    
+}
+
+.mensaje__campo:focus{
+    outline: none;
+}
+
+
+.salida-datos {
+    background-color: var(--blanco);
+    padding: 18rem 1.5rem 20rem 1.5rem;
+    margin: -5rem -15rem 0 15rem;
+    
+    border-radius: 15px;
+    
+    -webkit-box-shadow: 5px 5px 23px 7px rgba(0,0,0,0.13);
+    -moz-box-shadow: 5px 5px 23px 7px rgba(0,0,0,0.13);
+    box-shadow: 5px 5px 23px 7px rgba(0,0,0,0.13);
+}
+
+.salida-datos__texto {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.salida-datos__titulo{
+    font-weight: 700;
+}
+
+.salida-datos__parrafo {
+    font-size: 1.6rem;
+}
+
+.botones{
+    align-self: center;
+    margin-bottom: 5rem;  
+}
+
+.botones p{
+    font-weight: 400;
+}
+
+.boton{
+    padding: 2rem 10rem;
+    margin: 0 1rem;
+    border-radius: 1rem;
+    border: none;
+    
+}
+
+.boton-azul{
+    background-color: var(--azulMarino);
+    color: var(--blanco);
+}
+.boton-blanco{
+    background-color: var(--azulBlanco);
+    color: var(--azulMarino);
+    border: 1px var(--azulMarino) solid;
+
 }
