@@ -64,6 +64,7 @@ p {
     font-size: 3rem;
 }
 
+
 .mensaje__campo {
     display: block;
     background-color: var(--bodyColor);
@@ -74,7 +75,20 @@ p {
     
 }
 
-.mensaje_salida
+.mensaje_salida {
+    display: block;
+    background-color: var(--blanco);
+    border: var(--azulBlanco);
+    width: 38.6rem;
+    height: 30.4rem;
+    resize: none;
+    text-align: justify;
+    outline: none;
+
+    font-family: var(--font);
+    font-size: 1.8rem;
+    color: var(--azulMarinoLight);
+}
 
 .mensaje__campo:focus{
     outline: none;
@@ -83,7 +97,7 @@ p {
 
 .salida-datos {
     background-color: var(--blanco);
-    padding: 18rem 1.5rem 22rem 1.5rem;
+    padding: 0rem 1.5rem 0rem 1.5rem;
     margin: -7rem -15rem 0 15rem;
     
     border-radius: 15px;
@@ -91,16 +105,22 @@ p {
     -webkit-box-shadow: 5px 5px 23px 7px rgba(0,0,0,0.13);
     -moz-box-shadow: 5px 5px 23px 7px rgba(0,0,0,0.13);
     box-shadow: 5px 5px 23px 7px rgba(0,0,0,0.13);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .encriptacion {
     display: flex;
     justify-content: center;
+    margin: 10rem 0 5rem 0;
 }
 
 .salida-datos__texto {
     text-align: center;
     font-size: 1.8rem;
+    padding: 5rem 0 20rem 0;
 }
 
 .salida-datos__titulo{
