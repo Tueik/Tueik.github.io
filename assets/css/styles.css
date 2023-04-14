@@ -74,6 +74,8 @@ p {
     
 }
 
+.mensaje_salida
+
 .mensaje__campo:focus{
     outline: none;
 }
@@ -89,6 +91,11 @@ p {
     -webkit-box-shadow: 5px 5px 23px 7px rgba(0,0,0,0.13);
     -moz-box-shadow: 5px 5px 23px 7px rgba(0,0,0,0.13);
     box-shadow: 5px 5px 23px 7px rgba(0,0,0,0.13);
+}
+
+.encriptacion {
+    display: flex;
+    justify-content: center;
 }
 
 .salida-datos__texto {
