@@ -4,6 +4,7 @@
     --azulMarinoLight: #0f52a3;
     --azulMarinoClick: #4c6bf4;
     --azulBlanco: #D8DFE8;
+    --verdeClaro: #12e720;
 
     --blanco: #FFFFFF;
     --font: 'Rubik', sans-serif;
@@ -84,7 +85,7 @@ p {
     resize: none;
     text-align: justify;
     outline: none;
-
+    padding: 0 1rem 0 1rem;
     font-family: var(--font);
     font-size: 1.8rem;
     color: var(--azulMarinoLight);
@@ -114,13 +115,15 @@ p {
 .encriptacion {
     display: flex;
     justify-content: center;
-    margin: 10rem 0 5rem 0;
+    margin: 15rem 0 10rem 0;
 }
 
 .salida-datos__texto {
     text-align: center;
+
     font-size: 1.8rem;
-    padding: 5rem 0 20rem 0;
+    margin: 10rem 0 5rem 0;
+    
 }
 
 .salida-datos__titulo{
@@ -149,7 +152,19 @@ p {
     border-radius: 1rem;
     border: none;
     font-family: var(--font);
+    font-size: 1.6rem;
     
+}
+
+.boton--copiar {
+    margin: 2rem 0 2rem 0;
+    
+}.boton--copiar:hover{background-color: var(--azulMarinoClick); color: var(--blanco);}
+
+.boton--copiado {
+    background-color: var(--verdeClaro);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .boton-azul{
