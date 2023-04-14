@@ -1,23 +1,33 @@
 let mensaje = document.querySelector('#mensaje');
+mensaje.addEventListener('input', obtenerMensaje)
 
-mensajeValor = mensaje.value;
-
-console.log(mensajeValor.length);
+function obtenerMensaje(){
+    mensajeValor = mensaje.value; 
+    areaTexto.value = mensajeValor;
+}
 
 
 let encriptacion = document.querySelector("#encriptacion")
 let imagen = document.createElement("img");
 imagen.src = "/assets/img/Muñeco.png";
 
-let areaTexto = document.createElement("p");
+let areaTexto = document.createElement("textarea");
+areaTexto.classList.add('mensaje_salida');
+areaTexto.disabled = true;
 
 
+
+
+console.log(areaTexto);
+console.log(areaTexto.value);
+
+console.log(mensaje);
 
 function salidaDatos(){
-    if(mensajeValor == 0){
+    if(mensaje.length == 0){
         encriptacion.appendChild(imagen);
     } else {
-
+        encriptacion.append(areaTexto);
     }
 }
 
