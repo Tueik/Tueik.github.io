@@ -15,16 +15,8 @@ let areaTexto = document.createElement("textarea");
 areaTexto.classList.add('mensaje_salida');
 areaTexto.disabled = true;
 
-
-
-
-console.log(areaTexto);
-console.log(areaTexto.value);
-
-console.log(mensaje);
-
 function salidaDatos(){
-    if(mensaje.length == 0){
+    if(mensaje.textLength == 0){
         encriptacion.appendChild(imagen);
     } else {
         encriptacion.append(areaTexto);
