@@ -165,8 +165,9 @@ p {
 
 .boton--copiado {
     background-color: var(--verdeClaro);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    /* text-transform: uppercase; */
+    font-weight: 700;
+    margin: 2rem 0 2rem 0;
 }
 
 .boton-azul{
