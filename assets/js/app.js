@@ -30,7 +30,7 @@ function obtenerMensaje(){
 
 function encriptar(){
    
-    if(/^([a-zñ]+\s)*[a-zñ]+$/i.test(mensaje.value )){
+    if(/^([a-zñ]+\s)*[a-zñ]+$/.test(mensaje.value)){
     let mensajeEncriptar = mensajeValor;
     mensajeEncriptar = mensajeEncriptar.replace(/e/g, "enter");
     mensajeEncriptar = mensajeEncriptar.replace(/i/g, "imes");
@@ -123,7 +123,7 @@ const toggleBtns = document.querySelectorAll('.toggle_btn');
 const closeBtns = document.querySelectorAll('.close_btn');
 const openModal = (index) => {
   modals[index].classList.add('open');
-  if (mensaje.value.length == 0){
+  if (mensaje.value.length == 0 ){
         modalTexto1.textContent = "No hay nada que encriptar";
         modalTexto2.textContent = "Escribe un mensaje :)";
     } else {
