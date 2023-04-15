@@ -29,25 +29,41 @@ function obtenerMensaje(){
 }
 
 function encriptar(){
-    let mensajeEncriptado = mensajeValor;
-    mensajeEncriptado = mensajeEncriptado.replace(/e/g, "enter");
-    mensajeEncriptado = mensajeEncriptado.replace(/i/g, "imes");
-    mensajeEncriptado = mensajeEncriptado.replace(/a/g, "ai");
-    mensajeEncriptado = mensajeEncriptado.replace(/o/g, "ober");
-    mensajeEncriptado = mensajeEncriptado.replace(/u/g, "ufat");
+    let mensajeEncriptar = mensajeValor;
+    mensajeEncriptar = mensajeEncriptar.replace(/e/g, "enter");
+    mensajeEncriptar = mensajeEncriptar.replace(/i/g, "imes");
+    mensajeEncriptar = mensajeEncriptar.replace(/a/g, "ai");
+    mensajeEncriptar = mensajeEncriptar.replace(/o/g, "ober");
+    mensajeEncriptar = mensajeEncriptar.replace(/u/g, "ufat");
 
-    areaTexto.value = mensajeEncriptado;
+    areaTexto.value = mensajeEncriptar;
 }
 
 function desencriptar(){
+    let mensajeDesencriptar = areaTexto.value;
+    mensajeDesencriptar = mensajeDesencriptar.replace(/enter/g, "e");
+    mensajeDesencriptar = mensajeDesencriptar.replace(/imes/g, "i");
+    mensajeDesencriptar = mensajeDesencriptar.replace(/ai/g, "a");
+    mensajeDesencriptar = mensajeDesencriptar.replace(/ober/g, "o");
+    mensajeDesencriptar = mensajeDesencriptar.replace(/ufat/g, "u");
 
+    areaTexto.value = mensajeDesencriptar;
+}
+
+function letraMinuscula(){
+    let minuscula = mensaje.value;
+    let letra;
+    if( minuscula == minuscula.toLowerCase()){
+        letra = true;
+    }
+    console.log(letra);
 }
 
 let botonEncriptar = document.querySelector("#encriptar");
 botonEncriptar.addEventListener('click', encriptar);
 
 let botonDesencriptar = document.querySelector("#desencriptar");
-// botonDesencriptar.addEventListener('click', desencriptar);
+botonDesencriptar.addEventListener('click', desencriptar);
 
 let encriptacion = document.querySelector("#encriptacion");
 
