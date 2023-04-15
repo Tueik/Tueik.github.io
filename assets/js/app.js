@@ -29,14 +29,18 @@ function obtenerMensaje(){
 }
 
 function encriptar(){
+    if(mensaje.value === mensaje.value.toLowerCase()){
     let mensajeEncriptar = mensajeValor;
     mensajeEncriptar = mensajeEncriptar.replace(/e/g, "enter");
     mensajeEncriptar = mensajeEncriptar.replace(/i/g, "imes");
     mensajeEncriptar = mensajeEncriptar.replace(/a/g, "ai");
     mensajeEncriptar = mensajeEncriptar.replace(/o/g, "ober");
     mensajeEncriptar = mensajeEncriptar.replace(/u/g, "ufat");
-
     areaTexto.value = mensajeEncriptar;
+    } else {
+        alert("No se puede encriptar");
+    }
+    
 }
 
 function desencriptar(){
@@ -50,14 +54,6 @@ function desencriptar(){
     areaTexto.value = mensajeDesencriptar;
 }
 
-function letraMinuscula(){
-    let minuscula = mensaje.value;
-    let letra;
-    if( minuscula == minuscula.toLowerCase()){
-        letra = true;
-    }
-    console.log(letra);
-}
 
 let botonEncriptar = document.querySelector("#encriptar");
 botonEncriptar.addEventListener('click', encriptar);
