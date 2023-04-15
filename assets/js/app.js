@@ -29,7 +29,7 @@ function obtenerMensaje(){
 }
 
 function encriptar(){
-    if(mensaje.value === mensaje.value.toLowerCase()){
+    if(/^([a-zñ]+\s)*[a-zñ]+$/i.test(mensaje.value)){
     let mensajeEncriptar = mensajeValor;
     mensajeEncriptar = mensajeEncriptar.replace(/e/g, "enter");
     mensajeEncriptar = mensajeEncriptar.replace(/i/g, "imes");
