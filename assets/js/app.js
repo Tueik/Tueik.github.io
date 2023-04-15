@@ -105,9 +105,13 @@ function botonCopiado() {
     btnCopiar.remove();
     aviso.appendChild(btnCopiado);
     setTimeout(() => {
-      aviso.removeChild(btnCopiado);
-      aviso.appendChild(btnCopiar);
+        aviso.removeChild(btnCopiado);
+        aviso.appendChild(btnCopiar);
+        if(mensaje.textLength == 0){
+            btnCopiar.remove();
+        }
     }, 2000);
+    
   }
 
 modalTexto1 = document.querySelector("#modal-texto1");
@@ -127,8 +131,8 @@ const openModal = (index) => {
         modalTexto1.textContent = "No hay nada que encriptar";
         modalTexto2.textContent = "Escribe un mensaje :)";
     } else {
-        modalTexto1.textContent = "No se aceptan caracteres especiales";
-        modalTexto2.textContent = "( ,-+>@!|/$?#%&*# etc..)";
+        modalTexto1.textContent = "No se aceptan caracteres especiales o mayúsculas";
+        modalTexto2.textContent = "( ,-+>@!|/$?#%&*# ABC etc..)";
     }
 };
 const closeModal = (index) => {
