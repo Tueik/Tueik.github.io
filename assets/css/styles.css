@@ -159,7 +159,7 @@ p {
 .boton--copiar {
     margin: 2rem 0 2rem 0;
     
-}.boton--copiar:hover{background-color: var(--azulMarinoClick); color: var(--blanco);}
+}.boton--copiar:hover{background-color: var(--azulMarinoClick); color: var(--blanco); cursor: pointer;}
 
 .boton--copiado {
     background-color: var(--verdeClaro);
