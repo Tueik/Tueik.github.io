@@ -16,10 +16,12 @@ function observarMensaje(){
         imagen.remove();
         avisoTitulo.remove();
         avisoTexto.remove();
-
     }
+    
     obtenerMensaje();
+    
 }
+
 
 function obtenerMensaje(){
     mensajeValor = mensaje.value; 
@@ -27,18 +29,25 @@ function obtenerMensaje(){
 }
 
 function encriptar(){
-    mensajeValor = mensajeValor.replace(/e/g, "enter");
-    mensajeValor = mensajeValor.replace(/i/g, "imes");
-    mensajeValor = mensajeValor.replace(/a/g, "ai");
-    mensajeValor = mensajeValor.replace(/o/g, "ober");
-    mensajeValor = mensajeValor.replace(/u/g, "ufat");
+    let mensajeEncriptado = mensajeValor;
+    mensajeEncriptado = mensajeEncriptado.replace(/e/g, "enter");
+    mensajeEncriptado = mensajeEncriptado.replace(/i/g, "imes");
+    mensajeEncriptado = mensajeEncriptado.replace(/a/g, "ai");
+    mensajeEncriptado = mensajeEncriptado.replace(/o/g, "ober");
+    mensajeEncriptado = mensajeEncriptado.replace(/u/g, "ufat");
 
-    console.log(mensajeValor);
+    areaTexto.value = mensajeEncriptado;
 }
 
 function desencriptar(){
 
 }
+
+let botonEncriptar = document.querySelector("#encriptar");
+botonEncriptar.addEventListener('click', encriptar);
+
+let botonDesencriptar = document.querySelector("#desencriptar");
+// botonDesencriptar.addEventListener('click', desencriptar);
 
 let encriptacion = document.querySelector("#encriptacion");
 
