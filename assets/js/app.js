@@ -29,7 +29,8 @@ function obtenerMensaje(){
 }
 
 function encriptar(){
-    if(/^([a-zñ]+\s)*[a-zñ]+$/i.test(mensaje.value)){
+   
+    if(/^([a-zñ]+\s)*[a-zñ]+$/i.test(mensaje.value )){
     let mensajeEncriptar = mensajeValor;
     mensajeEncriptar = mensajeEncriptar.replace(/e/g, "enter");
     mensajeEncriptar = mensajeEncriptar.replace(/i/g, "imes");
@@ -38,7 +39,9 @@ function encriptar(){
     mensajeEncriptar = mensajeEncriptar.replace(/u/g, "ufat");
     areaTexto.value = mensajeEncriptar;
     } else {
-        alert("No se puede encriptar");
+        openModal(0); 
+        const miModal = document.querySelector('#mi-modal');
+        miModal.classList.add('open');
     }
     
 }
@@ -86,5 +89,42 @@ let btnCopiado = document.createElement("button");
 btnCopiado.textContent = "Mensaje copiado!";
 btnCopiado.classList.add("boton", "boton--copiado");
 
-
 observarMensaje();
+
+modalTexto1 = document.querySelector("#modal-texto1");
+modalTexto2 = document.querySelector("#modal-texto2");
+
+
+// Modal alerta | https://www.cssscript.com/modal-zoom-animation/
+const modals = document.querySelectorAll('.modal');
+const toggleBtns = document.querySelectorAll('.toggle_btn');
+const closeBtns = document.querySelectorAll('.close_btn');
+const openModal = (index) => {
+  modals[index].classList.add('open');
+  if (mensaje.value.length == 0){
+        modalTexto1.textContent = "No hay nada que encriptar";
+        modalTexto2.textContent = "Escribe un mensaje :)";
+    } else {
+        modalTexto1.textContent = "No se aceptan caracteres especiales";
+        modalTexto2.textContent = "( -+>@!|/$?#%&*# etc..)";
+    }
+};
+const closeModal = (index) => {
+  modals[index].classList.remove('open');
+};
+
+// closing the current opened Modal.
+closeBtns.forEach((currCloseBtn, index) => {
+    currCloseBtn.addEventListener('click', () => {
+        closeModal(index);
+    });
+});
+
+// close the current opened Modal on clicking outside.
+window.addEventListener('click', (e) => {
+  if (e.target.className === 'modal_wrapper') {
+    modals.forEach((currModal) => {
+      currModal.classList.remove('open');
+    });
+  }
+});
