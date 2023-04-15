@@ -84,15 +84,37 @@ avisoTexto.textContent = "Ingresa el texto que desees encriptar o desencriptar";
 let btnCopiar = document.createElement("button");
 btnCopiar.textContent = "Copiar Texto";
 btnCopiar.classList.add("boton", "boton--copiar");
+btnCopiar.addEventListener('click', botonCopiar);
 
 let btnCopiado = document.createElement("button");
-btnCopiado.textContent = "Mensaje copiado!";
 btnCopiado.classList.add("boton", "boton--copiado");
+btnCopiado.textContent = "Mensaje copiado!";
 
-observarMensaje();
+function botonCopiar(){
+    botonCopiado();
+    copiarTexto();
+}
+
+function copiarTexto(){
+    areaTexto.value;
+    areaTexto.select();
+    areaTexto.setSelectionRange(0, 99999);
+    navigator.clipboard.writeText(areaTexto.value);
+}
+function botonCopiado() {
+    btnCopiar.remove();
+    aviso.appendChild(btnCopiado);
+    setTimeout(() => {
+      aviso.removeChild(btnCopiado);
+      aviso.appendChild(btnCopiar);
+    }, 2000);
+  }
 
 modalTexto1 = document.querySelector("#modal-texto1");
 modalTexto2 = document.querySelector("#modal-texto2");
+
+observarMensaje();
+
 
 
 // Modal alerta | https://www.cssscript.com/modal-zoom-animation/
@@ -106,7 +128,7 @@ const openModal = (index) => {
         modalTexto2.textContent = "Escribe un mensaje :)";
     } else {
         modalTexto1.textContent = "No se aceptan caracteres especiales";
-        modalTexto2.textContent = "( -+>@!|/$?#%&*# etc..)";
+        modalTexto2.textContent = "( ,-+>@!|/$?#%&*# etc..)";
     }
 };
 const closeModal = (index) => {
