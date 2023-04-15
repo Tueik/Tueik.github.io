@@ -26,6 +26,19 @@ function obtenerMensaje(){
     areaTexto.value = mensajeValor;
 }
 
+function encriptar(){
+    mensajeValor = mensajeValor.replace(/e/g, "enter");
+    mensajeValor = mensajeValor.replace(/i/g, "imes");
+    mensajeValor = mensajeValor.replace(/a/g, "ai");
+    mensajeValor = mensajeValor.replace(/o/g, "ober");
+    mensajeValor = mensajeValor.replace(/u/g, "ufat");
+
+    console.log(mensajeValor);
+}
+
+function desencriptar(){
+
+}
 
 let encriptacion = document.querySelector("#encriptacion");
 
