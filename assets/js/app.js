@@ -88,7 +88,7 @@ btnCopiar.addEventListener('click', botonCopiar);
 
 let btnCopiado = document.createElement("button");
 btnCopiado.classList.add("boton", "boton--copiado");
-btnCopiado.textContent = "Mensaje copiado!";
+btnCopiado.textContent = "Texto Copiado!";
 
 function botonCopiar(){
     botonCopiado();
