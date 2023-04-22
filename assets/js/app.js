@@ -135,7 +135,7 @@ const openModal = (index) => {
   modals[index].classList.add('open');
   if (mensaje.value.length == 0 ){
         modalTexto1.textContent = "No hay nada que procesar";
-        modalTexto2.textContent = "Escribe un mensaje :)";
+        modalTexto2.textContent = "Escribe o inserta un mensaje :)";
     } else {
         modalTexto1.textContent = "No se aceptan caracteres especiales o mayúsculas";
         modalTexto2.textContent = "( ,-+>@!|/$?#%&*# ABC etc..)";
