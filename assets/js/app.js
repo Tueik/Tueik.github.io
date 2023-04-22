@@ -47,14 +47,20 @@ function encriptar(){
 }
 
 function desencriptar(){
+    if(/^([a-zñ]+\s)*[a-zñ]+$/.test(mensaje.value)){
     let mensajeDesencriptar = areaTexto.value;
-    mensajeDesencriptar = mensajeDesencriptar.replace(/enter/g, "e");
-    mensajeDesencriptar = mensajeDesencriptar.replace(/imes/g, "i");
-    mensajeDesencriptar = mensajeDesencriptar.replace(/ai/g, "a");
-    mensajeDesencriptar = mensajeDesencriptar.replace(/ober/g, "o");
-    mensajeDesencriptar = mensajeDesencriptar.replace(/ufat/g, "u");
+        mensajeDesencriptar = mensajeDesencriptar.replace(/enter/g, "e");
+        mensajeDesencriptar = mensajeDesencriptar.replace(/imes/g, "i");
+        mensajeDesencriptar = mensajeDesencriptar.replace(/ai/g, "a");
+        mensajeDesencriptar = mensajeDesencriptar.replace(/ober/g, "o");
+        mensajeDesencriptar = mensajeDesencriptar.replace(/ufat/g, "u");
 
     areaTexto.value = mensajeDesencriptar;
+        } else {
+            openModal(0); 
+            const miModal = document.querySelector('#mi-modal');
+            miModal.classList.add('open');
+        }
 }
 
 
@@ -128,7 +134,7 @@ const closeBtns = document.querySelectorAll('.close_btn');
 const openModal = (index) => {
   modals[index].classList.add('open');
   if (mensaje.value.length == 0 ){
-        modalTexto1.textContent = "No hay nada que encriptar";
+        modalTexto1.textContent = "No hay nada que procesar";
         modalTexto2.textContent = "Escribe un mensaje :)";
     } else {
         modalTexto1.textContent = "No se aceptan caracteres especiales o mayúsculas";
